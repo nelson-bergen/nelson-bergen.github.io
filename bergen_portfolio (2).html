@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bergen Nelson - Engineering Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #34495e;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #2c3e50;
+        }
+
+        section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(45deg, #27ae60, #3498db);
+            margin: 0.5rem auto;
+        }
+
+        .about-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .work-samples {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .work-sample {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #27ae60;
+        }
+
+        .work-sample h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .work-sample .company {
+            background: #ecf0f1;
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+
+        .work-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .work-section h4 {
+            color: #34495e;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            background: #e8f5e8;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border-left: 3px solid #27ae60;
+        }
+
+        .contact-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .disclaimer {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem auto;
+            max-width: 800px;
+            text-align: center;
+            color: #856404;
+        }
+
+        .disclaimer h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .contact-info {
+                align-items: stretch;
+            }
+        }
+
+        .highlight {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        .impact-stat {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid #3498db;
+            margin: 1rem 0;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bergen Nelson</h1>
+            <p>Mechanical Engineer | Problem Solver | Design Innovator</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Work Samples</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I've always enjoyed the process of building and solving problems. As a kid I spent countless hours in the wood shop with my dad and grandpa, and I fell in love with the type of mechanical thinking that goes into realizing a design in the physical world. I've continued to practice these skills in my personal life by repairing used bicycles, skis, and other outdoor equipment.</p>
+                
+                <p>Now having completed two co-op experiences as an engineer at <span class="highlight">EZ Ice Inc</span> and <span class="highlight">Fresenius NxStage</span>, I have been able to build my passion and skillset professionally, contributing to product design and development, sustaining efforts, failure investigations, and verification testing across both the sports equipment and medical device industries.</p>
+                
+                <p>I really enjoyed the fulfilling nature of my work at my most recent co-op experience in the medical device industry at Fresenius NxStage. I hope to continue to develop my career in the <span class="highlight">medical device industry</span> and work on products that improve patient outcomes and quality of life.</p>
+                
+                <p>Outside of the lab, I am a <span class="highlight">cross country skier and triathlete</span>. I also love to go to the climbing gym where I've been bouldering for a year and a half and I am currently pursuing my lead climb certification in order to start climbing big walls in the outdoors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Work Samples</h2>
+            
+            <div class="work-samples">
+                <div class="work-sample">
+                    <h3>Reliability Test Fixture</h3>
+                    <div class="company">R&D Co-op • Fresenius NxStage</div>
+                    
+                    <div class="work-section">
+                        <h4>The Challenge</h4>
+                        <p>We needed a way to reliably cycle-test a peristaltic pump used within one of our dialysate preparation units, to determine its failure methods and lifecycle. The challenge was to create a comprehensive testing solution that could simulate extended use while monitoring performance metrics.</p>
+                    </div>
+
+                    <div class="work-section">
+                        <h4>My Solution</h4>
+                        <p>I created a test fixture that included mounts for 5 pumps on a wire rack, which on a timer would run fluid through the pumps over a set period of time. Using equipment already available in the lab and shop spaces, I designed custom mounting blocks and fastening hardware using <span class="highlight">SolidWorks</span>, before fabricating them out of aluminum stock using a 2-axis CNC Mill, belt sander, and band saw.</p>
+                        
+                        <p>One key challenge was that the DC motors generated significant heat over time. To address this, I used wire racks to encourage natural convective air cooling and designed mounting blocks to raise motors away from heat-sensitive components like STEP drivers and power sources.</p>
+                        
+                        <p>Beyond the fixture, I developed comprehensive lifecycle testing procedures and failure criteria for volume flow rate and sound level based on system specifications and worst-case environmental conditions.</p>
+                    </div>
+
+                    <div class="work-section">
+                        <h4>Impact & Results</h4>
+                        <div class="impact-stat">
+                            <strong>Accelerated Testing:</strong> Simulated 1 year of use over 3 months, allowing rapid validation of new pump designs
+                        </div>
+                        <p>The fixture enabled longer testing periods without motor cooling interruptions and was designed to be expandable for future testing needs. Through my lifecycle testing procedures, we identified failure methods that would have otherwise gone unnoticed.</p>
+                    </div>
+
+                    <div class="work-section">
+                        <h4>Skills Developed</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">SolidWorks CAD Design</div>
+                            <div class="skill-item">CNC Mill Programming & Operation</div>
+                            <div class="skill-item">Design for Manufacturing (DFM)</div>
+                            <div class="skill-item">Test Procedure Development</div>
+                            <div class="skill-item">Environmental Testing Equipment</div>
+                            <div class="skill-item">Pressure & Acoustic Sensors</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-sample">
+                    <h3>Pressure Hammering Investigation</h3>
+                    <div class="company">R&D Co-op • Fresenius NxStage</div>
+                    
+                    <div class="work-section">
+                        <h4>The Challenge</h4>
+                        <p>Manufacturing identified that a sensor in one of our products was experiencing reliability issues, resulting in abnormally high pressure readings that triggered safety alarms. A theory proposed by our team was that pressure hammering from rapid valve closure may have been causing mechanical deformation of the sensor body. I was tasked with leading an investigation to determine whether pressure hammering was occurring in our system.</p>
+                    </div>
+
+                    <div class="work-section">
+                        <h4>My Approach</h4>
+                        <p>I developed a series of tests to measure the presence of pressure hammering and identify variables impacting system pressure variation, including fluid pathway configuration, user interactions, and emergency valve closures.</p>
+                        
+                        <p>To overcome the limited resolution of the system's built-in measurement utility, I connected the sensor directly to an <span class="highlight">oscilloscope</span> to catch rapid pressure spikes. With help from senior technicians and electrical engineers, I learned to amplify and clean the signal using fixtures and capacitors.</p>
+                        
+                        <p>I wrote a <span class="highlight">Python script</span> that communicated with the oscilloscope using SCPI standards to automate data collection, automatically recording maximum voltage and frequency upon voltage trigger events.</p>
+                    </div>
+
+                    <div class="work-section">
+                        <h4>Results & Impact</h4>
+                        <p>Using this test fixture, I successfully documented the pressure waveform within the system's fluid pathway and provided evidence of potential pressure hammering. Although another phenomenon was ultimately determined to be responsible for the sensor reliability issue, my investigation prompted further research into pressure hammering effects within the system.</p>
+                    </div>
+
+                    <div class="work-section">
+                        <h4>Skills Developed</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">Circuit Signal Analysis</div>
+                            <div class="skill-item">Python Hardware Communication</div>
+                            <div class="skill-item">Oscilloscope Operation</div>
+                            <div class="skill-item">Root Cause Analysis</div>
+                            <div class="skill-item">Test Design & Implementation</div>
+                            <div class="skill-item">SCPI Protocol Programming</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="disclaimer">
+            <h3>Confidentiality Notice</h3>
+            <p>The types of images and content I am able to include in my portfolio are limited by the NDA I signed as a condition for my co-op work experience. However, I would be happy to discuss my experiences in more detail during an interview or conversation.</p>
+        </div>
+    </div>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-section">
+                <h3 style="margin-bottom: 1.5rem; color: #2c3e50;">Let's Connect</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email:</strong> bergenskynelson@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <strong>University Email:</strong> nelson.be@northeastern.edu
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> (631) 601-3130
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bergen Nelson. All rights reserved.</p>
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">This portfolio was developed with the use of AI. All of the text included is written by myself, however AI was used to format this content into a HTML website.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active state to navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.pageYOffset >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.style.backgroundColor = '';
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.style.backgroundColor = '#2c3e50';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
