@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliability Test Fixture - Bergen Nelson</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #27ae60, #229954);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: white;
+            color: #27ae60;
+            padding: 0.6rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #ecf0f1;
+        }
+
+        .content {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+
+        .work-section {
+            margin-bottom: 2rem;
+        }
+
+        .work-section h2 {
+            color: #27ae60;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .work-section p {
+            margin-bottom: 1rem;
+        }
+
+        .impact-stat {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid #3498db;
+            margin: 1rem 0;
+            font-weight: 500;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            background: #e8f5e8;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border-left: 3px solid #27ae60;
+        }
+
+        .highlight {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Reliability Test Fixture</h1>
+            <div class="company">R&D Co-op • Fresenius NxStage</div>
+            <a href="index.html" class="back-button">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="work-section">
+                <h2>The Challenge</h2>
+                <p>We needed a way to reliably cycle-test a peristaltic pump used within one of our dialysate preparation units, to determine its failure methods and lifecycle. The challenge was to create a comprehensive testing solution that could simulate extended use while monitoring performance metrics.</p>
+            </div>
+
+            <div class="work-section">
+                <h2>My Solution</h2>
+                
+                <h3 style="color: #34495e; margin: 1.5rem 0 0.8rem 0;">Making the Fixture</h3>
+                <p>I created a test fixture that included mounts for 5 pumps on a wire rack, which on a timer would run fluid through the pumps over a set period of time. Using equipment already available in the lab and shop spaces, I designed custom mounting blocks and fastening hardware using <span class="highlight">SolidWorks</span>, before fabricating them out of aluminum stock using a 2-axis CNC Mill, belt sander, and band saw.</p>
+                
+                <p>This experience allowed me to learn design for manufacturing (DFM), and to be creative when building a fixture on a limited budget. With the help of more senior members of the sustaining and electrical engineering teams, I learned how to connect each pump to a power supply and step driver in order to power the system.</p>
+
+                <h3 style="color: #34495e; margin: 1.5rem 0 0.8rem 0;">Overcoming Heat Challenges</h3>
+                <p>One challenge that arose was that the DC motors used to run the dialysate pumps generated a large amount of heat over time, which could potentially be hazardous to certain materials. To combat this challenge, I used wire racks to store the fixture, which encouraged natural convective air cooling of the motors. I also designed the mounting blocks to raise the motor off of the rack away from other components (STEP Drivers, Power Sources), which could be damaged by the heat.</p>
+
+                <h3 style="color: #34495e; margin: 1.5rem 0 0.8rem 0;">Lifecycle Testing</h3>
+                <p>Beyond the fixture, I developed procedures and failure mechanisms in order to perform lifecycle testing on the peristaltic pumps. I developed failure criteria for volume flow rate and sound level based on system specifications and worst-case environmental conditions.</p>
+                
+                <p>For example, I developed the flow rate criterion by characterizing the volume flow rate of the peristaltic pumps at a variety of temperatures, humidities, and disposable types. I found the condition that resulted in the worst performance and then correlated that volume flow rate to a pressure reading that could be taken repeatedly in a normal lab environment.</p>
+            </div>
+
+            <div class="work-section">
+                <h2>Impact & Results</h2>
+                <div class="impact-stat">
+                    <strong>Accelerated Testing:</strong> Simulated 1 year of use over 3 months, allowing rapid validation of new pump designs
+                </div>
+                <p>This result allowed us to cycle-test the pumps for longer periods of time without needing to stop for motor cooling. The system was also designed to be expandable to accommodate more pump samples in the future if needed. With this fixture, I simulated 1 year of use over the course of 3 months, which allowed our team to confirm that the new model of pump performed longer than previous design renditions.</p>
+                
+                <p>Through my lifecycle testing procedures and failure criteria, we also noted certain failure methods related to the lifecycle of the pump that otherwise would not have been noted.</p>
+            </div>
+
+            <div class="work-section">
+                <h2>Skills Developed</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">SolidWorks CAD Design</div>
+                    <div class="skill-item">CNC Mill Programming & Operation</div>
+                    <div class="skill-item">Design for Manufacturing (DFM)</div>
+                    <div class="skill-item">Metal Fabrication</div>
+                    <div class="skill-item">Test Procedure Development</div>
+                    <div class="skill-item">Design of Experiments</div>
+                    <div class="skill-item">Environmental Testing Equipment</div>
+                    <div class="skill-item">Pressure & Acoustic Sensors</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="back-button" style="background: #27ae60; color: white;">← Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bergen Nelson. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressure Hammering Investigation - Bergen Nelson</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #27ae60, #229954);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: white;
+            color: #27ae60;
+            padding: 0.6rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #ecf0f1;
+        }
+
+        .content {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+
+        .work-section {
+            margin-bottom: 2rem;
+        }
+
+        .work-section h2 {
+            color: #27ae60;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .work-section p {
+            margin-bottom: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            background: #e8f5e8;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border-left: 3px solid #27ae60;
+        }
+
+        .highlight {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pressure Hammering Investigation</h1>
+            <div class="company">R&D Co-op • Fresenius NxStage</div>
+            <a href="index.html" class="back-button">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="work-section">
+                <h2>The Challenge</h2>
+                <p>Manufacturing had determined that a sensor in one of our products was experiencing reliability issues, resulting in abnormally high pressure readings that triggered safety alarms. A theory proposed by our team was that pressure hammering was occurring as a result of rapid valve closure, which may have been causing mechanical deformation of the sensor body.</p>
+                
+                <p>I was then tasked with leading an investigation to determine whether or not pressure hammering was occurring in our system.</p>
+            </div>
+
+            <div class="work-section">
+                <h2>My Approach</h2>
+                
+                <h3 style="color: #34495e; margin: 1.5rem 0 0.8rem 0;">Developing the Test Strategy</h3>
+                <p>I developed a series of tests to measure the presence of pressure hammering within the system and to see what variables impacted the amount of variation in system pressure. This included analyzing the device's fluid pathway, improper use by the user, and the sudden closure of valves due to emergency alarms.</p>
+
+                <h3 style="color: #34495e; margin: 1.5rem 0 0.8rem 0;">Overcoming Measurement Limitations</h3>
+                <p>In order to bypass the limited resolution of the system's built-in data measurement utility, I connected the sensor directly to an <span class="highlight">oscilloscope</span> in order to catch very quick pressure spikes indicative of pressure hammering. With the help of a senior technician and member of the electrical engineering team, I learned how to amplify the signal using a fixture and cleaned the signal using a capacitor.</p>
+
+                <h3 style="color: #34495e; margin: 1.5rem 0 0.8rem 0;">Automating Data Collection</h3>
+                <p>I wrote a <span class="highlight">Python script</span> that communicated with the oscilloscope using SCPI standards in order to automate data collection. The script automatically recorded key pieces of information such as maximum voltage and frequency upon the tripping of a rising voltage level trigger. This automation significantly improved the efficiency and accuracy of data collection.</p>
+            </div>
+
+            <div class="work-section">
+                <h2>Results & Impact</h2>
+                <p>Using this test fixture, I was able to document the pressure waveform within the system's fluid pathway and show that there was potentially evidence of pressure hammering within the system. Although it was later determined that another phenomenon was responsible for the pressure sensor reliability issue, my test did prompt further investigation into the possibilities of pressure hammering within the system.</p>
+                
+                <p>This investigation demonstrated the value of systematic root cause analysis and the importance of developing custom test solutions when standard measurement tools are insufficient.</p>
+            </div>
+
+            <div class="work-section">
+                <h2>Skills Developed</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Circuit Signal Analysis</div>
+                    <div class="skill-item">Python Hardware Communication</div>
+                    <div class="skill-item">Oscilloscope Operation</div>
+                    <div class="skill-item">SCPI Protocol Programming</div>
+                    <div class="skill-item">Root Cause Analysis</div>
+                    <div class="skill-item">Test Design & Implementation</div>
+                    <div class="skill-item">Signal Amplification & Filtering</div>
+                    <div class="skill-item">Automated Data Collection</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="back-button" style="background: #27ae60; color: white;">← Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bergen Nelson. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
