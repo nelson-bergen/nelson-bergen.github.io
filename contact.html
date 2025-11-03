@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bergen Nelson</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #27ae60, #229954);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: white;
+            color: #27ae60;
+            padding: 0.6rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #ecf0f1;
+        }
+
+        .content {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-intro h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-intro p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .contact-methods {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #27ae60;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .contact-details {
+            flex-grow: 1;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-value {
+            color: #555;
+        }
+
+        .contact-value a {
+            color: #27ae60;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: #229954;
+            text-decoration: underline;
+        }
+
+        .social-section {
+            text-align: center;
+            padding: 2rem;
+            background: #e8f5e8;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .social-section h3 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .linkedin {
+            background: #0077b5;
+            color: white;
+        }
+
+        .linkedin:hover {
+            background: #006399;
+            color: white;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 1.5rem;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>Let's connect and discuss opportunities</p>
+            <a href="index.html" class="back-button">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="contact-intro">
+                <h2>Contact Information</h2>
+                <p>I'm always interested in new opportunities and collaborations in the medical device industry. Feel free to reach out!</p>
+            </div>
+
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <span class="contact-label">Personal Email</span>
+                        <span class="contact-value"><a href="mailto:bergenskynelson@gmail.com">bergenskynelson@gmail.com</a></span>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🎓</div>
+                    <div class="contact-details">
+                        <span class="contact-label">University Email</span>
+                        <span class="contact-value"><a href="mailto:nelson.be@northeastern.edu">nelson.be@northeastern.edu</a></span>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-details">
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value"><a href="tel:6316013130">(631) 601-3130</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-section">
+                <h3>Connect With Me</h3>
+                <div class="social-links">
+                    <a href="YOUR_LINKEDIN_URL_HERE" class="social-link linkedin" target="_blank">
+                        <span>🔗</span>
+                        LinkedIn Profile
+                    </a>
+                    <!-- Add more social links here if needed -->
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="back-button" style="background: #27ae60; color: white;">← Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bergen Nelson. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
