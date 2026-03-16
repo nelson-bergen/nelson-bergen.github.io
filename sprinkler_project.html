@@ -188,6 +188,15 @@
             color: rgba(255, 255, 255, 0.7);
             font-size: 1.2em;
         }
+        .image-caption {
+            background: rgba(0, 76, 80, 0.9);
+            color: white;
+            padding: 12px 20px;
+            font-size: 0.9em;
+            text-align: center;
+            font-style: italic;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
         
         /* Two column image layout option */
         .image-grid {
@@ -320,6 +329,7 @@
         <div class="image-inline">
             <!-- Replace with: <img src="your-image-1.jpg" alt="System Overview"> -->
             <div class="image-placeholder">[Image 1: System Overview]</div>
+            <div class="image-caption">Figure 1: Complete system assembly showing mechanical positioning mechanism and control electronics</div>
         </div>
         
         <p>Key technical challenges included implementing smooth motor control using the AccelStepper library, developing a reliable sensor calibration protocol, and designing a control algorithm that could adapt to varying soil conditions and coverage requirements. The mechanical system was designed to provide up to 1/4 acre coverage with adjustable spray patterns.</p>
@@ -330,6 +340,7 @@
         <div class="image-inline">
             <!-- Replace with: <img src="your-image-2.jpg" alt="Control Electronics"> -->
             <div class="image-placeholder">[Image 2: Control Electronics]</div>
+            <div class="image-caption">Figure 2: Complete system assembly showing mechanical positioning mechanism and control electronics</div>
         </div>
         
         <p>Throughout the development process, iterative prototyping and testing refined both the hardware and software components. The final system demonstrates robust performance across varying environmental conditions and provides a foundation for future enhancements including weather API integration and mobile app control.</p>
