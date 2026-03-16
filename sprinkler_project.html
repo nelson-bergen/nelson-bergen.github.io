@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Sprinkler System | Bergen's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: white;
+        }
+        
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            padding: 15px 0;
+            z-index: 1000;
+            border-bottom: 2px solid #1a1a1a;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.95em;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        nav a:hover {
+            color: #aaa;
+        }
+        
+        /* Page Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 40px 60px;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-bottom: 40px;
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #1a1a1a;
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+        
+        .back-button:hover {
+            background: #1a1a1a;
+            color: white;
+        }
+        
+        /* Project Header */
+        .project-number {
+            background: #1a1a1a;
+            color: white;
+            padding: 8px 16px;
+            font-size: 1em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .project-meta {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        
+        .project-description {
+            font-size: 1.05em;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 50px;
+        }
+        
+        .tech-tag {
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+            font-size: 0.9em;
+        }
+        
+        /* Section Headers */
+        h2 {
+            font-size: 1.8em;
+            margin: 50px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a1a1a;
+        }
+        
+        /* Body Text */
+        p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        /* Video Container - Autoplay */
+        .video-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            margin: 30px 0;
+            border: 2px solid #1a1a1a;
+            background: #e0e0e0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .video-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #666;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Image Containers - Inline with text */
+        .image-inline {
+            width: 100%;
+            margin: 30px 0;
+            border: 2px solid #1a1a1a;
+            background: #e0e0e0;
+            overflow: hidden;
+        }
+        
+        .image-inline img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-placeholder {
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        /* Two column image layout option */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .image-grid .image-inline {
+            margin: 0;
+        }
+        
+        /* Slides Container */
+        .slides-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: 2px solid #1a1a1a;
+            background: #e0e0e0;
+            margin: 30px 0 50px;
+            overflow: hidden;
+        }
+        
+        .slides-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slides-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #666;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .slides-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #1a1a1a;
+            transition: all 0.2s ease;
+        }
+        
+        .slides-link:hover {
+            background: white;
+            color: #1a1a1a;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 80px 20px 40px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                gap: 20px;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="portfolio_technical.html#about">About</a></li>
+            <li><a href="portfolio_technical.html#projects">Projects</a></li>
+            <li><a href="portfolio_technical.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <!-- Back Button -->
+        <a href="portfolio_technical.html#projects" class="back-button">← Back to Projects</a>
+        
+        <!-- Project Header -->
+        <div class="project-number">[02]</div>
+        <h1>Super Sprinkler System</h1>
+        <p class="project-meta">Senior Capstone Project | Northeastern University</p>
+        <p class="project-description">An intelligent irrigation control system capable of covering up to 1/4 acre using targeted watering patterns and soil moisture sensing for optimized water conservation.</p>
+        <div class="tech-tags">
+            <span class="tech-tag">Arduino/C++</span>
+            <span class="tech-tag">Motor Control</span>
+            <span class="tech-tag">Sensor Integration</span>
+            <span class="tech-tag">Control Systems</span>
+            <span class="tech-tag">AccelStepper Library</span>
+            <span class="tech-tag">System Design</span>
+        </div>
+        
+        <!-- Introduction -->
+        <h2>// INTRODUCTION</h2>
+        <p>The Super Sprinkler system was developed as my senior capstone project at Northeastern University, addressing the challenge of efficient irrigation for residential and small commercial properties. Traditional sprinkler systems waste significant amounts of water through indiscriminate watering patterns and lack of environmental feedback.</p>
+        
+        <p>This project integrates embedded systems programming, mechanical design, and control theory to create an automated irrigation solution that optimizes water usage based on real-time soil moisture data and targeted coverage patterns.</p>
+        
+        <!-- Autoplay Video - Place at top after introduction -->
+        <div class="video-container">
+            <!-- Replace with your YouTube embed and add autoplay parameters:-->
+            <iframe src="https://www.youtube.com/embed/xTbADutRiqw?autoplay=1&mute=1" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+            
+            <!--Note: autoplay=1 enables autoplay, mute=1 is required by most browsers for autoplay to work
+            
+            <div class="video-placeholder">[Embed YouTube Video Here]<br>Add ?autoplay=1&mute=1 to URL for autoplay</div>-->
+        </div>
+        
+        <!-- Project Details -->
+        <h2>// PROJECT DETAILS</h2>
+        <p>The Super Sprinkler system utilizes an Arduino-based microcontroller to coordinate stepper motor control for precise positioning and actuation. The system reads soil moisture sensor data to determine when and where watering is needed, then executes targeted irrigation patterns to minimize water waste.</p>
+        
+        <!-- Image 1 - Inline with text -->
+        <div class="image-inline">
+            <!-- Replace with: <img src="your-image-1.jpg" alt="System Overview"> -->
+            <div class="image-placeholder">[Image 1: System Overview]</div>
+        </div>
+        
+        <p>Key technical challenges included implementing smooth motor control using the AccelStepper library, developing a reliable sensor calibration protocol, and designing a control algorithm that could adapt to varying soil conditions and coverage requirements. The mechanical system was designed to provide up to 1/4 acre coverage with adjustable spray patterns.</p>
+        
+        <p>The control software implements event-based logic to manage irrigation cycles, with safety features to prevent over-watering and system damage. Integration testing validated the system's ability to reduce water consumption by approximately 30-40% compared to conventional timer-based sprinkler systems while maintaining adequate lawn coverage.</p>
+        
+        <!-- Image 2 - Inline with text -->
+        <div class="image-inline">
+            <!-- Replace with: <img src="your-image-2.jpg" alt="Control Electronics"> -->
+            <div class="image-placeholder">[Image 2: Control Electronics]</div>
+        </div>
+        
+        <p>Throughout the development process, iterative prototyping and testing refined both the hardware and software components. The final system demonstrates robust performance across varying environmental conditions and provides a foundation for future enhancements including weather API integration and mobile app control.</p>
+        
+        <!-- Presentation -->
+        <h2>// PROJECT PRESENTATION</h2>
+        <p>View the complete technical presentation detailing system architecture, design decisions, and testing results.</p>
+        
+        <div class="slides-container">
+            <!-- Replace with your Google Slides embed:
+            <iframe src="https://docs.google.com/presentation/d/e/YOUR_PRESENTATION_ID/embed?start=false&loop=false&delayms=3000" 
+                    frameborder="0" 
+                    allowfullscreen="true" 
+                    mozallowfullscreen="true" 
+                    webkitallowfullscreen="true">
+            </iframe>
+            -->
+            <div class="slides-placeholder">[Embed Google Slides Here]<br>Replace with iframe embed code</div>
+        </div>
+        
+        <!-- Alternative: Link to slides if not embedding -->
+        <!-- <a href="YOUR_GOOGLE_SLIDES_LINK" target="_blank" class="slides-link">View Full Presentation →</a> -->
+        
+    </div>
+</body>
+</html>

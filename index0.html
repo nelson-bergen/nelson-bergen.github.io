@@ -60,7 +60,7 @@
             border: 2px solid #1a1a1a;
             margin-top: 50px;
             overflow: hidden;
-            background: url(main_backgrnd.jpeg);/*#00ff00;  Greenscreen green placeholder */
+            background: url('main_backgrnd.jpeg'); /* Greenscreen green placeholder */
             background-size: cover;
             background-position: center;
         }
@@ -89,20 +89,20 @@
             color: white;
         }
         
-        .profile-box {
-            width: 180px;
-            height: 180px;
-            border: 2px solid white;
-            background: url(SunsetPortrait.JPG);
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4em;
-            font-weight: bold;
-            color: white;
-        }
+     .profile-box {
+    width: 180px;
+    height: 180px;
+    border: 2px solid white;
+    background: url(SunsetPortrait.JPG);
+    background-size: cover;  /* This scales the image to cover the entire box */
+    background-position: center;  /* This centers the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+}
         
         .header-text h1 {
             font-size: 2.5em;
@@ -536,37 +536,35 @@
                     </div>
                 </div>
                 
-                <a href="sprinkler_project.html" style="text-decoration: none; color: inherit;">
-                    <div class="project-card sprinkler">
-                        <div class="project-main-content">
-                            <div class="project-number">[02]</div>
-                            <div>
-                                <h3 class="project-title">Super Sprinkler System</h3>
-                                <p class="project-subtitle">Senior Capstone Project</p>
-                                <div class="tech-preview">
-                                    <span class="tech-preview-badge">Arduino</span>
-                                    <span class="tech-preview-badge">Motor Control</span>
-                                    <span class="tech-preview-badge">Sensors</span>
-                                </div>
+                <div class="project-card sprinkler">
+                    <div class="project-main-content">
+                        <div class="project-number">[02]</div>
+                        <div>
+                            <h3 class="project-title">Super Sprinkler System</h3>
+                            <p class="project-subtitle">Senior Capstone Project</p>
+                            <div class="tech-preview">
+                                <span class="tech-preview-badge">Arduino</span>
+                                <span class="tech-preview-badge">Motor Control</span>
+                                <span class="tech-preview-badge">Sensors</span>
                             </div>
-                        </div>
-                        <div class="project-overlay">
-                            <h3 class="overlay-title">Super Sprinkler System</h3>
-                            <p class="overlay-description">
-                                Engineered an intelligent irrigation control system capable of covering up to 1/4 acre using targeted watering patterns. System integrates soil moisture sensing, motor control, and microcontroller programming to optimize water usage through data-driven irrigation decisions.
-                            </p>
-                            <div class="tech-grid">
-                                <div class="tech-badge">Arduino/C++</div>
-                                <div class="tech-badge">Motor Control</div>
-                                <div class="tech-badge">Sensor Integration</div>
-                                <div class="tech-badge">Control Systems</div>
-                                <div class="tech-badge">AccelStepper</div>
-                                <div class="tech-badge">System Design</div>
-                            </div>
-                            <div class="overlay-cta">Click to Learn More</div>
                         </div>
                     </div>
-                </a>
+                    <div class="project-overlay">
+                        <h3 class="overlay-title">Super Sprinkler System</h3>
+                        <p class="overlay-description">
+                            Engineered an intelligent irrigation control system capable of covering up to 1/4 acre using targeted watering patterns. System integrates soil moisture sensing, motor control, and microcontroller programming to optimize water usage through data-driven irrigation decisions.
+                        </p>
+                        <div class="tech-grid">
+                            <div class="tech-badge">Arduino/C++</div>
+                            <div class="tech-badge">Motor Control</div>
+                            <div class="tech-badge">Sensor Integration</div>
+                            <div class="tech-badge">Control Systems</div>
+                            <div class="tech-badge">AccelStepper</div>
+                            <div class="tech-badge">System Design</div>
+                        </div>
+                        <div class="overlay-cta">Click to Learn More</div>
+                    </div>
+                </div>
                 
                 <div class="project-card sports">
                     <div class="project-main-content">
