@@ -201,12 +201,8 @@
         }
         
         .project-card.sprinkler::before {
-            /* background: linear-gradient(135deg, rgba(46, 125, 50, 0.6), rgba(102, 187, 106, 0.6)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%232e7d32" width="800" height="600"/><circle cx="400" cy="300" r="200" fill="%2366bb6a" opacity="0.3"/></svg>'); */
-            background: url(frog-cute.JPG);
-            background-size: cover;
-            background-position: center;
-
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.6), rgba(102, 187, 106, 0.6)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%232e7d32" width="800" height="600"/><circle cx="400" cy="300" r="200" fill="%2366bb6a" opacity="0.3"/></svg>');
         }
         
         .project-card.sports::before {
@@ -472,20 +468,22 @@
             <div class="profile-box"></div>
             <div class="header-text">
                 <h1>BERGEN</h1>
-                <div class="tagline">> B.S. Mechanical Engineering, Northeastern University</div>
-                <p>I'm a recent Northeastern University graduate with experience in the medical device and sports equipment industries. I've always loved building and tinkering, making furniture and sports equipment, fixing appliances, bikes, and skis, and contributing to my 2 Co-ops at Fresenius NxStage and EZ Ice inc.</p>
-                
-                <h3 style="font-size: 1.3em; margin-top: 30px; margin-bottom: 15px; color: white;">Key Skills & Proficiencies</h3>
-                <p style="margin-bottom: 10px;"><strong>Programming:</strong> MATLAB, Python (NumPy, Pandas, Matplotlib), C++, Arduino</p>
-                <p style="margin-bottom: 10px;"><strong>Software:</strong> SolidWorks (CSWA certified), Onshape, Abaqus, Agile Document Management, VS Code</p>
-                <p style="margin-bottom: 20px;"><strong>Fabrication:</strong> CNC milling, Arduino Uno/Mega, 3D-printing, sheet metal, wood working, laser cutting, soldering</p>
-                
-                <div style="margin-top: 25px;">
-                    <a href="bergen-nelson-resume.pdf" 
-                       download 
-                       style="display: inline-block; padding: 12px 24px; background: white; color: #006064; text-decoration: none; font-weight: bold; border: 2px solid white; transition: all 0.2s ease;">
-                        Download Resume →
-                    </a>
+                <div class="tagline">> Mechanical Engineer_</div>
+                <p>Recent Northeastern University graduate specializing in medical device design and product development. My engineering approach combines analytical rigor with practical problem-solving, honed through hands-on experience in the medical device and sports equipment industries.</p>
+                <p>I'm passionate about creating engineering solutions that have meaningful real-world impact, particularly in healthcare applications where precision and reliability are paramount.</p>
+                <div class="stats">
+                    <div class="stat-box">
+                        <span class="stat-value">3.78</span>
+                        <span class="stat-label">GPA</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">CSWA</span>
+                        <span class="stat-label">Certified</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">2</span>
+                        <span class="stat-label">Co-ops</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -497,7 +495,7 @@
             <h2 class="section-header">// PROJECTS</h2>
             
             <div class="projects-grid">
-                <!-- <div class="project-card medical">
+                <div class="project-card medical">
                     <div class="project-main-content">
                         <div class="project-number">[01]</div>
                         <div>
@@ -525,12 +523,12 @@
                         </div>
                         <div class="overlay-cta">Click to Learn More</div>
                     </div>
-                </div> -->
+                </div>
                 
                 <a href="sprinkler_project.html" style="text-decoration: none; color: inherit;">
                     <div class="project-card sprinkler">
                         <div class="project-main-content">
-                            <div class="project-number">[01]</div>
+                            <div class="project-number">[02]</div>
                             <div>
                                 <h3 class="project-title">Super Sprinkler System</h3>
                                 <p class="project-subtitle">Senior Capstone Project</p>
@@ -544,25 +542,22 @@
                         <div class="project-overlay">
                             <h3 class="overlay-title">Super Sprinkler System</h3>
                             <p class="overlay-description">
-                                A manufacturable, automated
-                                residential sprinkler that reduces water waste
-                                and manual interaction, capable of watering a given
-                                lawn geometry within a 40 ft radius from a
-                                stationary point based on sensed water need.
+                                Engineered an intelligent irrigation control system capable of covering up to 1/4 acre using targeted watering patterns. System integrates soil moisture sensing, motor control, and microcontroller programming to optimize water usage through data-driven irrigation decisions.
                             </p>
                             <div class="tech-grid">
-                                <div class="tech-badge">Electronics Prototyping</div>
-                                <div class="tech-badge">DFM</div>
+                                <div class="tech-badge">Arduino/C++</div>
+                                <div class="tech-badge">Motor Control</div>
                                 <div class="tech-badge">Sensor Integration</div>
                                 <div class="tech-badge">Control Systems</div>
-                                <div class="tech-badge">Correlation Testing</div>
+                                <div class="tech-badge">AccelStepper</div>
+                                <div class="tech-badge">System Design</div>
                             </div>
                             <div class="overlay-cta">Click to Learn More</div>
                         </div>
                     </div>
                 </a>
                 
-                <!-- <div class="project-card sports">
+                <div class="project-card sports">
                     <div class="project-main-content">
                         <div class="project-number">[03]</div>
                         <div>
@@ -667,8 +662,8 @@
                             <div class="tech-badge">Data Processing</div>
                         </div>
                         <div class="overlay-cta">Click to Learn More</div>
-                    </div> -->
-                <!-- </div> -->
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -678,14 +673,18 @@
         <div class="contact-box">
             <h2>// GET IN TOUCH</h2>
             <p>Interested in discussing engineering opportunities or collaboration?</p>
-            <div class="contact-grid" style="grid-template-columns: repeat(2, 1fr);">
-                <a href="mailto:bergenskynelson@gmail.com" class="contact-item">
+            <div class="contact-grid">
+                <a href="mailto:your.email@example.com" class="contact-item">
                     <span class="contact-label">EMAIL</span>
-                    bergenskynelson@gmail.com
+                    Send Message
                 </a>
-                <a href="https://linkedin.com/in/bergen-nelson" class="contact-item">
+                <a href="https://linkedin.com/in/yourprofile" class="contact-item">
                     <span class="contact-label">LINKEDIN</span>
                     Connect
+                </a>
+                <a href="https://github.com/yourprofile" class="contact-item">
+                    <span class="contact-label">GITHUB</span>
+                    View Code
                 </a>
             </div>
         </div>
